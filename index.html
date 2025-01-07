@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center;">
+    <div style="margin-bottom: 30px ;">
+        <h1 style="font-family:roboto ; font-weight: 600;">VOWEL COUNTER</h1>
+    </div>
+    <div>
+        <textarea rows="20" cols="50" id="ta">FVDFS</textarea>
+    </div>
+        <p style="font-weight: bolder;font-size: xx-large;" id="count">Vowel Count: 0</p>
+    <div>
+        <button style="padding: 10px; margin: 3px; font-size: large;" id="check">Check Vowel</button>
+        <button  style="padding: 10px; margin: 3px; font-size: large;"id="reset">Reset</button>
+    </div>
+
+
+    <script>
+        let rebtn = document.getElementById("reset");
+        let chbtn = document.getElementById("check");
+        let text = document.getElementById("ta");
+        let para = document.getElementById("count");
+        
+        rebtn.addEventListener("click",()=>{
+            text.value=""
+            para.textContent = "Vowel Count: 0"
+        })
+
+        chbtn.addEventListener("click",()=>{
+           let a = text.value.length;
+           let b = text.value.toLowerCase();
+           let c = 0;
+           for ( let x=0;x<a; x++)
+           {
+            if (b[x]=="a" || b[x]=="e" || b[x]=="i" || b[x]=="o" || b[x]=="u"){
+                c=c+1
+            }
+           }
+           para.textContent=`Vowel Count:${c}`
+        })
+            
+
+
+       
+
+    </script>
+</body>
+</html>

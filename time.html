@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: orange;">
+    
+    <div style="border: 2px solid black; padding: 60px;padding-bottom: 500px; margin: 30px; background-color: black; border-radius: 10px;" >
+
+
+        <h1 style=" text-align: center;border: 1px solid gray; background-color: gray; font-size:xx-large;  font-weight: 900;" id="time"></h1>
+
+    </div>
+
+
+    <script>
+        let clock = document.getElementById("time");
+
+        let a = setInterval (() =>{
+            let b = new Date();
+            let yy = b.getFullYear();
+            let dd = b.getDay();
+            let c = b.getHours();
+            let d = b.getMinutes();
+            let f = b.getSeconds();
+            let all = `${yy}:${dd}:${c}:${d}:${f}`;
+
+            clock.innerHTML = all;
+        }
+         
+
+    )
+
+ </script>
+</body>
+</html>
