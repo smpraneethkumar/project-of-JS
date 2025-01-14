@@ -27,36 +27,57 @@
                 padding-left: 100px;
                 margin-top: 7px;
             }
-            .text{
-                
-            }
-            #iadd{
+            
+            /* #iadd{
                 border: 1px solid green;
                 padding: 10px;
-                width: 25px;
+                margin-top: 50px;
+                width: 50px;
+                height: 30px;
                 border-radius: 30px;
                 background-color: orange;
                 color: white;
-            }
+            } */
+            .listitems{
+                text-decoration: none;            }
         </style>
     </head>
 
     <body>
         <div class="container">
             <input type="text" class="text">
-            <button id="iadd"><i class="fa-solid fa-plus " ></i></button>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            <button id="iadd"><i class="fa-solid fa-plus"></i>add</button>
+          
+             <ul class="listitems" >
+                <li>tea</li>
+                <li>coffee</li>
+                <li>lime tea</li>
+                <li>ginger tea</li>
+                <li>soda</li>
+            </ul> 
         </div>
        <script>
-        const text = document.querySelector("text");
-        const add = document.getElementById("iadd");
-        const listitems = document.querySelector("ul li");
+        const text = document.querySelector(".text");
+     
+        
+        const plue = document.getElementById("#iadd");
+        
+        
+         const listitems = document.querySelector(".listitems");
+       
+        
+
+       
+
+        plue.addEventListener("click",()=>{
+            console.log("sdfsf");
+            
+           const a = container.querySelector("ul");
+           const d = document.createElement("li");
+           d.innerHTML= text.value;
+          a.appendChild(d);
+
+        })
         
         
 

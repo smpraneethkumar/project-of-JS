@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input to Tag Example</title>
+</head>
+<body>
+
+  <label for="inputField">Enter some text:</label>
+  <input type="text" id="inputField">
+  <button id="updateButton">Update Text</button>
+
+  <p>The entered text is: <span id="outputText">[Nothing entered]</span></p>
+
+  <script>
+    // Get references to the input field, button, and output span
+    const inputField = document.getElementById("inputField");
+    const updateButton = document.getElementById("updateButton");
+    const outputText = document.getElementById("outputText");
+
+    // Add event listener to the button
+    updateButton.addEventListener("click", () => {
+      // Get the value from the input field
+      const inputValue = inputField.value;
+
+      // Update the content of the output span with the input value
+      outputText.textContent = inputValue;
+    });
+  </script>
+
+</body>
+</html>
