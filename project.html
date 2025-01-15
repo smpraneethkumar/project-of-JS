@@ -17,70 +17,73 @@
             crossorigin="anonymous"
         />
         <style>
-            .container{
+            body{
+                background-color: rgb(8, 8, 42);
+            }
+            #container{
+                background-color:  rgb(16, 16, 66);
                 border: 3px solid black;
-                align-items: center;
+                
                 border-radius: 30px;
                 width: 400px;
                 height: 700px;
-                padding-top: 90px;
-                padding-left: 100px;
+                /* padding-top: 90px;
+                padding-left: 100px; */
                 margin-top: 7px;
+                margin-left: 500px;
+            }
+            #iadd{
+                border: 0cap;
+                background-color: rgb(239, 208, 33);
+                width: 80px;
+                height: 30px;
+                border-radius: 10px;
             }
             
-            /* #iadd{
-                border: 1px solid green;
-                padding: 10px;
-                margin-top: 50px;
-                width: 50px;
+            #listitems{
+                text-decoration: none;        
+               }
+            #textinput{
+                margin-top: 100px;
+                margin-left: 10px;
+                width: 300px;
                 height: 30px;
-                border-radius: 30px;
-                background-color: orange;
-                color: white;
-            } */
-            .listitems{
-                text-decoration: none;            }
+
+            }   
         </style>
     </head>
 
     <body>
-        <div class="container">
-            <input type="text" class="text">
-            <button id="iadd"><i class="fa-solid fa-plus"></i>add</button>
+        <div id="container">
+            <h2 style="color: white;text-align: center;">To Do List</h2>
+            <input type="text" id="textinput" placeholder="Make your list">
+            <button id="iadd">Add</button>
           
-             <ul class="listitems" >
-                <li>tea</li>
-                <li>coffee</li>
-                <li>lime tea</li>
+             <ul id="listitems" >
+                <li style="border: 1px solid white; background-color: white;"> rreading a books <button style="background-color: green;border-radius: 3px; border: green;margin-left: 110px; padding-left: 20px; align-items: center;"><i class="fa-solid fa-pen"></i></button><button style=" background-color: red;border-radius: 3px; border: red; margin-left: 10px;padding-left: 20px; text-align: center;"><i class="fa-solid fa-xmark"></i></button></li>
+                <li></li>
+                <li> tea</li>
                 <li>ginger tea</li>
                 <li>soda</li>
             </ul> 
         </div>
        <script>
-        const text = document.querySelector(".text");
+        const text = document.getElementById("textinput");
      
         
-        const plue = document.getElementById("#iadd");
+        const add = document.getElementById("iadd");
         
         
-         const listitems = document.querySelector(".listitems");
+         const listitems = document.getElementById("listitems");
        
-        
-
-       
-
-        plue.addEventListener("click",()=>{
-            console.log("sdfsf");
-            
-           const a = container.querySelector("ul");
-           const d = document.createElement("li");
-           d.innerHTML= text.value;
-          a.appendChild(d);
-
+        add.addEventListener("click",function adds(){
+            userText = document.getElementById("text").value;
+            document.getElementById("li").textContent = userText;
         })
-        
-        
 
+       
+
+       
        </script>
 
         <script
