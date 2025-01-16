@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // write a recursive funcation to revers a string.
+        // function strings (str){
+
+        //     if (!str) {
+        //         return "";
+        //     }
+        //     return strings(str.substring(1)) + str.chartAt(0);
+        // }
+        // console.log(strings("you"));
+        
+        let reverse = (str ) =>{
+            if (str.length === 0) return '';
+            return reverse(str.slice(1)) + str[0]
+        }
+        console.log(reverse("youtube"));
+        ////////////////////////////////////////////////////////////
+
+        //create a scenario where a funcation declaration is hosited but a funcation eexperssion is not ?
+        funcation1()
+        const funcation1 = function(){
+            console.log("it is a funcation experssion");
+            
+        }
+        funcation2()
+
+        function funcation2 (){
+            console.log("it is a fucation declaration");
+            
+        }
+
+        /////////////////////////////////////////////
+
+        //how does hoisting work in strict mode?
+
+        // "use strict"
+        // console.log(person);
+        // var person =  "praneeth";
+
+        // //if we use this var in the strict mode also it won't get any error in the console 
+        // //and if we use the let and const it  will show an error in the console .
+        // console.log(person2);
+        
+        // let person2 = "raju";
+        // console.log(person3);
+        
+        // const person3 = "ram";
+
+        // so, we should not use var keyword in the javascript 
+        /////////////////////////////////////////////////////////////////
+        //how does hositing work with arrow funcation?
+    //     console.log(adding (2,3));
+
+    //    let adding = (num1,num2)=>{
+    //             return num1 * num2
+    //    }
+        // it won't work before initialization  
+       //////////////////////////////////////////////////////////////////
+        // what is the output of teh following code: console.log(typeoof null). expalin why?
+        console.log(typeof null);
+       
+        
+        
+        
+        //the null is not a primitve value which is typeof value.
+
+       //////////////////////////////////////////
+       //create a function valiadate phone number that checks if a given string is a valid phone number in the format (XXX XXXX ...) where x is a digit.
+
+        ////////////////////////////////////////////
+        //write a funcation where you illustate the difference between funcation-scoped and block-scoped variables using loop and var V/S let.
+
+        function text1 (){
+            
+            var num3 = 3;
+            var num4 = 3
+            if (text1) {
+                console.log(num3*num4);
+                
+            }
+        }text1()
+        ////////////////////////////////////////////////////
+
+        
+
+
+    </script>
+</body>
+</html>
